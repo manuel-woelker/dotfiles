@@ -1,0 +1,11 @@
+= Dot Files
+
+These are config files to set up a system the way I like it.
+Lifted from Ryan Bates Dot Files (https://github.com/ryanb/dotfiles)
+
+== Installation
+
+  git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+  cd ~/.dotfiles
+  rake install
+

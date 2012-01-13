@@ -1,0 +1,29 @@
+[user]
+	name = Manuel Woelker
+	email = github@manuel.woelker.org
+	
+[core]
+	excludesfile = <%= ENV['HOME'] %>/.gitignore
+	editor = mate -w
+	autocrlf = input
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+
+[gui]
+	fontui = -family Verdana -size 10 -weight bold -slant roman -underline 0 -overstrike 0
+	editor = gedit
+[svn]
+	rmdir = true
+[branch]
+	autosetuprebase = always
+[alias]
+    ci = commit
+	g = !bash -c 'git gui & disown'
+	k = !bash -c 'gitk --all & disown'

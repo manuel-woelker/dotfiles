@@ -1,0 +1,13 @@
+.~lock*
+.#*
+#*
+*~
+*.bak
+*.aux
+*.log
+*.out
+*.pdf
+*.dvi
+*.kate-swp
+bin/
+*.backup
