@@ -5,7 +5,7 @@ desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc LICENSE].include? file
+    next if %w[Rakefile README.rdoc LICENSE mail-address].include? file
     
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
@@ -39,6 +39,9 @@ end
 
 def link_file(file)
   if file =~ /.erb$/
+	if File.exists?('mail-address')
+		mail = IO.read('mail-address')
+	end
     puts "generating ~/.#{file.sub('.erb', '')}"
     File.open(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"), 'w') do |new_file|
       new_file.write ERB.new(File.read(file)).result(binding)
