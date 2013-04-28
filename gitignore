@@ -11,3 +11,4 @@
 *.kate-swp
 bin/
 *.backup
+.idea
